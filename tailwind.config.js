@@ -25,6 +25,9 @@ module.exports = {
       },
       fontSize: {
         xl: ['3rem', '1.4']
+      },
+      inset: {
+        84: '15.2rem'
       }
     }
   },
