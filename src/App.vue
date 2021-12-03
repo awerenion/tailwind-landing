@@ -5,9 +5,9 @@
     <img
       src="./assets/Group.png"
       alt="Group"
-      class="absolute right-0"
+      class="absolute right-0 -z-10"
     >
-    <router-view class="w-82 mx-auto" />
+    <router-view />
   </div>
 </template>
 

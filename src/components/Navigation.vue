@@ -1,5 +1,5 @@
 <template>
-  <div class="text-white underline absolute left-84 top-auto flex ">
+  <div class="underline flex ">
     <router-link
       v-for="navItem in navList"
       :key="navItem.name"

@@ -1,5 +1,5 @@
 <template>
-  <div class="h-82 flex justify-between relative items-center mb-20">
+  <div class="h-82 flex justify-between items-center mb-20">
     <img
       src="../assets/Logo.svg"
       alt="highly"
@@ -7,7 +7,7 @@
     <Navigation
       :nav-list="navList"
     />
-    <div class="flex justify-center text-white items-center">
+    <div class="flex justify-center items-center">
       <basic-button>
         <img
           src="../assets/flag.png"
