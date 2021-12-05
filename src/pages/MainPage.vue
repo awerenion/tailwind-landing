@@ -5,7 +5,7 @@
       <div class="flex justify-between items-center relative">
         <div class="flex flex-col max-w-580">
           <span class="text-xl font-bold h-216 mt-14 mb-2">Optimize your performance management</span>
-          <span class="subtitle mb-16">Highly is a one stop solution for managing the financial affairs, effectively.</span>
+          <span class="subtitle mb-14">Highly is a one stop solution for managing the financial affairs, effectively.</span>
           <basic-button class="bg-blue-some w-183 mb-28">
             <span class="mr-2 font-bold">Get Started</span>
             <img
@@ -14,11 +14,13 @@
             >
           </basic-button>
         </div>
-        <img
-          src="../assets/graph.png"
-          alt="assetGraph"
-          class="z-10 absolute right-0 -top-2"
-        >
+        <div>
+          <img
+            class="pb-36"
+            src="../assets/graph.png"
+            alt="assetGraph"
+          >
+        </div>
       </div>
       <div class="flex justify-between items-center">
         <img
@@ -54,29 +56,29 @@
           </p>
         </div>
         <div class="flex justify-between">
-          <div class="flex flex-col justify-around hover:bg-blue w-100">
+          <div class="block ml-0 flex flex-col items-start pl-8 pt-8">
             <img
-              src=""
+              src="@/assets/cube.png"
               alt="cube"
             >
-            <span>Total Traceability</span>
-            <span>Total traceability by drill down ensuring reliability & justification of indicators</span>
+            <span class="title text-lg mt-4">Total Traceability</span>
+            <span class="subtitle text-sm max-w-xs">Total traceability by drill down ensuring reliability & justification of indicators</span>
           </div>
-          <div class="flex flex-col justify-around hover:bg-blue">
+          <div class="block flex flex-col items-start pl-8 pt-8">
             <img
-              src=""
+              src="@/assets/chem.png"
               alt="chemistry"
             >
-            <span>Well Structured</span>
-            <span>Structured analyses with selection, filter, and multiple granularity level criteria</span>
+            <span class="title text-lg mt-4">Well Structured</span>
+            <span class="subtitle text-sm max-w-xs">Structured analyses with selection, filter, and multiple granularity level criteria</span>
           </div>
-          <div class="flex flex-col justify-around hover:bg-blue">
+          <div class="block flex flex-col items-start pl-8 pt-8">
             <img
-              src=""
+              src="@/assets/brain.png"
               alt="brain"
             >
-            <span>High Integrity</span>
-            <span>Adapted and business-oriented user repository</span>
+            <span class="title text-lg mt-4">High Integrity</span>
+            <span class="subtitle text-sm max-w-xs">Adapted and business-oriented user repository</span>
           </div>
         </div>
       </div>
@@ -111,10 +113,12 @@
             <span class="title">Measure precisely Corporate performance</span>
             <span class="subtitle">Highly is a one stop solution for managing the financial affairs, effectively.</span>
           </div>
-          <img
-            src="@/assets/img.png"
-            alt="someImage"
-          >
+          <div>
+            <img
+              src="@/assets/img.png"
+              alt="someImage"
+            >
+          </div>
         </div>
       </div>
     </section>
@@ -132,6 +136,8 @@
     </div>
 
     <contacts />
+
+    <Footer />
   </div>
 </template>
 
@@ -139,13 +145,15 @@
 import BasicButton from '../components/BasicButton.vue'
 import Header from '../components/Header.vue'
 import Contacts from '../components/Contacts.vue'
+import Footer from '../components/Footer.vue'
 
 export default {
   name: 'MainPage',
   components: {
     Header,
     Contacts,
-    BasicButton
+    BasicButton,
+    Footer
   }
 }
 </script>

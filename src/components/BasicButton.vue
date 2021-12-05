@@ -1,11 +1,9 @@
 <template>
-  <router-link
+  <button
     class="flex mr-4 h-40 w-130 items-center justify-center"
-    tag="button"
-    to="/"
   >
     <slot />
-  </router-link>
+  </button>
 </template>
 
 <script>

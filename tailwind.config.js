@@ -8,12 +8,14 @@ module.exports = {
         82: '82%',
         1440: '1440px',
         130: '130px',
-        183: '183px'
+        183: '183px',
+        780: '784px'
       },
       height: {
         82: '82px',
         40: '40px',
-        216: '216px'
+        216: '216px',
+        128: '128px'
       },
       colors: {
         blue: {
@@ -25,7 +27,7 @@ module.exports = {
       },
       maxWidth: {
         580: '580px',
-        780: '780px'
+        780: '785px'
       },
       fontSize: {
         xl: ['3rem', '1.4']

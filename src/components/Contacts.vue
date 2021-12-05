@@ -73,29 +73,33 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="mt-4 w-8/12 mx-auto">
-        <input
-          v-model.trim="$v.contData.description.$model"
-          placeholder="Description"
-          class="input w-full h-24"
-        >
-        <div
-          v-if="!$v.contData.description.required && $v.contData.description.$dirty"
-          class="error"
-        >
-          required
-        </div>
-        <div @click="submitData">
-          <basic-button
-            class="bg-blue-some w-183 mt-8"
+        <div class="mt-4 w-full px-6">
+          <textarea
+            v-model.trim="$v.contData.description.$model"
+            placeholder="Description"
+            class=" max-w-780 w-full h-32 input pt-4 mx-auto"
+            style="resize:none"
+          />
+          <div
+            v-if="!$v.contData.description.required && $v.contData.description.$dirty"
+            class="error"
           >
-            <span class="mr-2 font-bold">Submit</span>
-            <img
-              src="../assets/Arrow.png"
-              alt="Arrow"
+            required
+          </div>
+          <div
+            class="xl:w-96 pr-2"
+            @click="submitData"
+          >
+            <basic-button
+              class="bg-blue-some w-183 mt-8 mx-auto"
             >
-          </basic-button>
+              <span class="mr-2 font-bold">Submit</span>
+              <img
+                src="../assets/Arrow.png"
+                alt="Arrow"
+              >
+            </basic-button>
+          </div>
         </div>
       </div>
     </div>
@@ -143,10 +147,26 @@ export default {
     }
   },
   methods: {
-    submitData () {
+    async submitData () {
       this.$v.$touch()
       if (!this.$v.$invalid) {
-        console.log(this.contData)
+        await fetch('http://localhost:8080/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          credentials: 'include',
+          body: JSON.stringify({
+            contData: this.contData
+          })
+        })
+      }
+      this.contData = {
+        firstName: '',
+        lastName: '',
+        emailAddress: '',
+        telephone: '',
+        description: ''
       }
     }
   }

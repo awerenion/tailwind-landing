@@ -22,4 +22,8 @@ body {
   .error {
     @apply text-red-700;
   }
+  ,
+  .block {
+    @apply hover:bg-blue-700 w-full border-solid border border-white border-opacity-10 h-60 ml-4 rounded;
+  }
 }
