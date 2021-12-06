@@ -1,4 +1,4 @@
-# books-proj
+# tailwind-proj
 
 ## Project setup
 ```
