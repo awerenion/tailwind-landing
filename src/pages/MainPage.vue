@@ -58,7 +58,7 @@
         <div class="flex justify-between">
           <div class="block ml-0 flex flex-col items-start pl-8 pt-8">
             <img
-              src="@/assets/cube.png"
+              v-lazy="svg1"
               alt="cube"
             >
             <span class="title text-lg mt-4">Total Traceability</span>
@@ -66,7 +66,7 @@
           </div>
           <div class="block flex flex-col items-start pl-8 pt-8">
             <img
-              src="@/assets/chem.png"
+              v-lazy="svg2"
               alt="chemistry"
             >
             <span class="title text-lg mt-4">Well Structured</span>
@@ -74,7 +74,7 @@
           </div>
           <div class="block flex flex-col items-start pl-8 pt-8">
             <img
-              src="@/assets/brain.png"
+              v-lazy="svg3"
               alt="brain"
             >
             <span class="title text-lg mt-4">High Integrity</span>
@@ -86,36 +86,36 @@
 
     <section class="w-100 relative">
       <img
+        v-lazy="'/img/Group1.6e8cf84a.png'"
         class="absolute top-0 left-0 -z-10"
-        src="@/assets/Group1.png"
         alt="lines"
       >
       <img
+        v-lazy="'/img/Group2.f4225452.png'"
         class="absolute bottom-44 right-0 -z-10"
-        src="@/assets/Group2.png"
         alt="lines"
       >
       <div class="w-82 mx-auto py-28">
         <div class="flex justify-between">
           <div>
             <img
-              src="@/assets/img.png"
+              v-lazy="'/img/img.c75fd37c.png'"
               alt="someImage"
             >
           </div>
-          <div class="flex flex-col max-w-xl">
+          <div class="flex flex-col max-w-xl justify-center">
             <span class="title">We specialize in asset tracing around the world</span>
             <span class="subtitle">Highly is a one stop solution for managing the financial affairs, effectively.</span>
           </div>
         </div>
         <div class="flex justify-between mt-52">
-          <div class="flex flex-col max-w-xl">
+          <div class="flex flex-col max-w-xl justify-center">
             <span class="title">Measure precisely Corporate performance</span>
             <span class="subtitle">Highly is a one stop solution for managing the financial affairs, effectively.</span>
           </div>
           <div>
             <img
-              src="@/assets/img.png"
+              v-lazy="'/img/img.c75fd37c.png'"
               alt="someImage"
             >
           </div>
@@ -154,6 +154,13 @@ export default {
     Contacts,
     BasicButton,
     Footer
+  },
+  data () {
+    return {
+      svg1: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJ8SURBVHgB7Vj/VcIwED58/m83sBuIE9QNZAPdQDYAJ4ANeEyATlA3QCeADcoG50W+QFr7I6khBV+/9+6lSS7pfcldLw1Rjx49evxLMPNYZC3yRJcEMfgBhmciC5EN5JHOGWJgLJLyHjPUn0WGIMIoYzoniEGRyBQrrggkaNeEIqO+BpGpbu8UWGHtIqMWY7qJD/h5ilWflK0mVlzhtmKOCfrXwdwK7jLHi1d1L4Zu0jBfHCw+yvy8QT+q2p0S3cRwqzH5BNxlA+NfHMblgthyjP/44COCBBxI/IB8AHOlrn7aFMQV+qn5PvIBTJgUXtD4HbcJYkPPjK8h3NYvAaNu5ac2QYy5Mi7kkZMSMNon6NuUuRUILLg8R9TmkSAE0Ff7HS+pR4Z+ZR4JRsDQGRpuNUVbLojZIY8EJ2Do5uJDGc8t8khnBKCvVn6Gcfr0OWG3hGZN4Ir8YyfyKXIvMkT5JXKS47NXAioWaG/0tNA1Q39MoWEZxJH2f6OtGMQRArjxSBI0BuDfqTaSKgjoNpQLrk+C1gSuqSX4eOxdinyoh8FgsKsbI/1bPL6ac0j7nFrCmQDvU/4W1QxGbR2mOBCRuXQZS5FI+5IcYU0AAbpVLxK5+cuqacgcb5hb7cSdlO/k+2sFP35kx58MdjxOY4xOet6DeIEdcBnnTADj1LFk7pNA7njgMK7NDqjrSH28ts7+LpNrIo274UKAC8drOhXY4RrEhgB0VtCbcajbOi5cE9bolBLgiuvI4KiLjyoCUh9x11eLBYP0vy+zcU3Iv89COT8P5i62KImPBzwfPosgENM5g49JL4PRGXamGz9vC8SHMtz6OrJHjx49Lg/fZ8j2m4ZPeNMAAAAASUVORK5CYII=',
+      svg2: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAM6SURBVHgB7ViLbdswED13gWoDc4OoE0idIN7A3sDeQOoEaidQNzA6gd0Jkk4gb2B3ggsPeowIRiEpS06QQA84WKKPvA8fjxSJZsyYMePTgZl3Whpu8aBlTR8F2tmNlrOWQktqva/oIwAZL5w2CeZAN8AXmgDaucSiSaLl0VH5p0VBd6VF0UQYFYA4IjTRjyIbND9azwb3Wo543mq5Q19F7wntwF7L1mlTWMAilVAHz8rRE1rV9NYAXYTnO4+OwuKtJUDp49GVivVAV2IRUkDmNlqW1NLgL7WUOS4Wi4unnzgts/MrQi/H2DvYuaDficYAmTyDBoVFjSSyr2AZqdtYdvawm9IYYMAq1OZxKjaA2qWRWT80BnAgc9o2MQNjrdSRs3XoKQa5GA/1DZXRE7V8tyEBXcjvUK5/1ui/xrsPlx47Cv2vByqEcHGNjPzErAg9yp7SmKNCmXVT4/cMjueOfgqq5Bi3xPPW2KWxAGVspzKLHmxoAj3GIkycMRK0s3HKSkZtBX9AW+NSakwAyvcfjCrbOY++CdJkPrvG7iAYgwGdPUfuqoZWAZ0UdoMFIMbgMvB/EhOkpZ+HnMOYwfIbYywNZZYjy53TJ2ZW6xgahcrohcKI0enD14l0/MACDU23IKe48aL4PckijuU3KtGQRbwP6AympW+wZcBQZWU1tow+l99r7A4C47wOwwdDFe42sspxruT+jaw0QXL/Rmg2sjNPdZPB3Y2CbO0Zd7vpc+YdfWlvuP8oIU65B0OFMc1GWMGOsbujMYAza6etjuBwhqALE3xA/8VGiH4NjQGykvUMfIvjtJuoSY7TRy3uhdSG4o65CXRjannoJuM6cFtdzpjigl+5YXil75AvsoS7z9XCWjcq1Nc7A/qjWjLzjdqMK2ozIu9pBDVkhy61/PcpcfdR/13LD9vO6I96j1GpKFufU1grNcqm8uiZMj3+5DkUcNC9B7VvGCqLGsrR24Wq2c0BZ0VWpjIhKLck7o2zCCzH+hp3bTIVEMQ9nhvzbP2/MjUdm9RkdJnkdloWm5Y/eD3RyxuGO7SL7m/fTd27A9k2NxlCk5KnumF4K3B3k8HccxyZMWPGjM+DJ0GSE32RAkOIAAAAAElFTkSuQmCC',
+      svg3: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAPOSURBVHgB7VmBddpADFX6OgCdoO4G7gQ4E4ROAJkAMoHJBCQTQCdIOoHTCWAD6ASwgSrhf+U439lnkzTte/7v6Zmn0+mkO0knG6IePXr0+O/BzAOhudCeS6yFxh65kVABGZVd6lx6b4gRW9BUaAjDFDNLZg5eLnQjNLHm/X0nZNEMRjzAiMQZn2GX9XQSGD91ZBLrJFRXRm8NLLqFQeaZB2TVuDFCZx+QWTi6KptRhw/UHoXQTujT1dXVF3luhA4BWcMf1MjshF6gy+grYsOqlQN6zPh5Kwsag16ERtQdEyqdINGpz1sqHb6Jmdz2BD4LHbCQwaNQilBIIvWYyvUgP3XOveFjYzbgvw4Q9wWfoHE6t8ZTK4aHFn+LHDhWHIufWXpSi28S32DZZlPqjNeFtLYPYawaVHhkh3bs1jgwsA23eAWXZfYzdG350jKLXemkJORAi/kD6MhDMjE5oMm0spI2dvGEzuM4absJWPNZKA3JdCmjR2BnF4ExNdQ3tgw5gSIw9gypE0HHYxx4ERpxtW+5Epq4BiG5NVxSOq/9B/DWbkjgtCYOb4ANUv6GLnBAL5eEqrvwDKMKp1LojTsX+kpVB5R3T46h8niisjx/d9ZIAmvHgcsGbMuBUsbnbcXUM16bxFw2f4zqk9Sssa9L5DoHtoG4dOWGblmMdEBL8jBCf86BKvaxYW5CuObrIEf/kzpA5m0iRVX/3DfQlAM7oaxBxtysKbUETiCLEE0osJFNDqyEZg3xuaayQ20MBQ90TtGUZ/LIYUt7iIIVEu3JUzJ14bXTPswR94mbAyiNUzvhzSa4tz1kn5DAy5B9MWVUy+KOnCPksrXWBb85tzRTGa8FnZc//b3G2B8+Ottr8rfQB9/arYASl3v4k7qbGLvH1gl4T9Gas+DT+4bNz9nTOBo0VSGF9yqXnVuFJuiJyKL6YjJyhu5CPZXw76gDYkJIS92IuzViO4u1c16EGoE1J1Te+l7EOPCI5xrlMkGiFp6kTmMchY7Mwy8Qcqa8mtD5QZcACy75hL1TSV7rjSy39DDXtBhdHakkFJ96lQX7y2zFAWveAnMTZ6zSsYbQ9n3gF5Uv8LahupDG912blx7NBySu5tjZvUBl0djF6GnrgGmhl9au6XNF3aE6M/2BjTleWp7W2otWDmCH9dLRuN0iLDIKfwKxP2gNamRS6NpD1zW9NbhsocdIbl8cz5CIx3dhyMwcGdNuLKCrSz91Gfj05cAk7IitL9FUdWiJKjQ18+i9ASfMSZjyN/LITVBhGLI5/wv/D/To0aNHjx7vhd/FINgnCC5A3gAAAABJRU5ErkJggg=='
+    }
   }
 }
 </script>

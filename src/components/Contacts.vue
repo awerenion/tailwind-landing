@@ -1,11 +1,11 @@
 <template>
   <div class="relative">
     <img
-      src="../assets/Group3.png"
+      v-lazy="'/img/Group3.dd406186.png'"
       alt="lines"
       class="absolute top-0 left-0"
     >
-    <div class="w-62 mx-auto py-16 flex flex-col text-center">
+    <div class="w-62 mx-auto py-16 flex flex-col text-center max-w-780">
       <div class="flex flex-col mb-12">
         <span class="title mr-0">Contact us to learn more</span>
         <span class="subtitle">Highly is a one stop solution for managing <br>the financial affairs, effectively.</span>
@@ -73,7 +73,7 @@
             </div>
           </div>
         </div>
-        <div class="mt-4 w-full px-6">
+        <div class="mt-4 w-full">
           <textarea
             v-model.trim="$v.contData.description.$model"
             placeholder="Description"
@@ -87,11 +87,10 @@
             required
           </div>
           <div
-            class="xl:w-96 pr-2"
             @click="submitData"
           >
             <basic-button
-              class="bg-blue-some w-183 mt-8 mx-auto"
+              class="bg-blue-some w-183 mt-8"
             >
               <span class="mr-2 font-bold">Submit</span>
               <img

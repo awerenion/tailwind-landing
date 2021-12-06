@@ -1,5 +1,5 @@
 <template>
-  <div class="flex ">
+  <div class="flex">
     <router-link
       v-for="navItem in navList"
       :key="navItem.name"

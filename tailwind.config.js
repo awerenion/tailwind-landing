@@ -6,7 +6,6 @@ module.exports = {
       width: {
         62: '62%',
         82: '82%',
-        1440: '1440px',
         130: '130px',
         183: '183px',
         780: '784px'
@@ -27,7 +26,7 @@ module.exports = {
       },
       maxWidth: {
         580: '580px',
-        780: '785px'
+        780: '784px'
       },
       fontSize: {
         xl: ['3rem', '1.4']
